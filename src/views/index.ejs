@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script type='text/javascript' src="/public/js/app.js"></script>
+
+<h2>ROS2 goToPose remote controller</h2>
+
+
+
+<form action="/goToPose" method = "POST">
+  
+  <!-- <input type="text" id="fname" name="posX" value="John"><br> -->
+  
+  <label for="fname">pos x:</label> <input type="text" name="positionX" value = 1.0><br>
+  <label for="fname">pos y:</label> <input type="text" name="positionY" value = 1.0><br>
+  <label for="fname">pos z:</label> <input type="text" name="positionZ" value = 1.0><br>
+  <label for="fname">ori x:</label> <input type="text" name="orientationX" value = 1.0><br>
+  <label for="fname">ori y:</label> <input type="text" name="orientationY" value = 1.0><br>
+  <label for="fname">ori z:</label> <input type="text" name="orientationZ" value = 1.0><br>
+  <label for="fname">ori w:</label> <input type="text" name="orientationW" value = 1.0><br>
+
+  
+  <br>
+  <input type="submit" value="Send">
+</form> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title ROS controller
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body 
+        header
+            h1 ROS controller 
+        main 
+            form#goToPose(action='/goToPose' method='POST')
+                input(type="text", placeholder = "position.x", required)#posX
+                input(type="text", placeholder = "position.y", required)#posY
+                //- input(type="text", placeholder = "position.z", required)
+                //- input(type="text", placeholder = "orientation.x", required)
+                //- input(type="text", placeholder = "orientation.y", required)
+                //- input(type="text", placeholder = "orientation.z", required)
+                //- input(type="text", placeholder = "orientation.w", required)
+                button(type="submit") Send
+            ul
+
+            form#message
+                input(type="text", placeholder = "write a msg", required)
+                button Send
+                
+
+        script(src="/public/js/app.js")
+        
+        button Call
+        
