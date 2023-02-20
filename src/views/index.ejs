@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROS2 Remote Controller</title>
+</head>
 <body>
+  <h2>ROS2 remote controller</h2>
+
+  <div id="main_container">
+    <div id="monitor_container">
+      <canvas id="monitor">
+      </canvas>
+    </div>
+    <div id="right_component">
+      <div id="feedback_msg_containger" class="msg_container">
+        <div id="feedback_msg_label" class="msg_label">feedback</div>
+        <div id="feedback_msg" class="msg">msg</div>
+      </div>
+      <div id="result_msg_containger" class="msg_container">
+        <div id="result_msg_label" class="msg_label">result</div>
+        <div id="result_msg" class="msg">msg</div>
+      </div>
+  
+                      
+          <div id="remote_controller">
+                    
+            <form action="/goToPose" method = "POST">
+              
+              <!-- <input type="text" id="fname" name="posX" value="John"><br> -->
+              
+              <label for="fname">pos x:</label> <input type="text" name="positionX" value = 1.0><br>
+              <label for="fname">pos y:</label> <input type="text" name="positionY" value = 1.0><br>
+              <label for="fname">pos z:</label> <input type="text" name="positionZ" value = 0.001><br>
+              <label for="fname">ori x:</label> <input type="text" name="orientationX" value = 0.707><br>
+              <label for="fname">ori y:</label> <input type="text" name="orientationY" value = 0.0><br>
+              <label for="fname">ori z:</label> <input type="text" name="orientationZ" value = 0.0><br>
+              <label for="fname">ori w:</label> <input type="text" name="orientationW" value = 0.707><br>
+  
+              
+              <br>
+              <input type="submit" value="Send">
+            </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <link rel="stylesheet" href="../public/style.css" type="text/css">
   <script type='text/javascript' src="/public/js/app.js"></script>
-
-<h2>ROS2 goToPose remote controller</h2>
-
-
-
-<form action="/goToPose" method = "POST">
-  
-  <!-- <input type="text" id="fname" name="posX" value="John"><br> -->
-  
-  <label for="fname">pos x:</label> <input type="text" name="positionX" value = 1.0><br>
-  <label for="fname">pos y:</label> <input type="text" name="positionY" value = 1.0><br>
-  <label for="fname">pos z:</label> <input type="text" name="positionZ" value = 1.0><br>
-  <label for="fname">ori x:</label> <input type="text" name="orientationX" value = 1.0><br>
-  <label for="fname">ori y:</label> <input type="text" name="orientationY" value = 1.0><br>
-  <label for="fname">ori z:</label> <input type="text" name="orientationZ" value = 1.0><br>
-  <label for="fname">ori w:</label> <input type="text" name="orientationW" value = 1.0><br>
-
-  
-  <br>
-  <input type="submit" value="Send">
-</form> 
-
-
-
 </body>
 </html>
+
+
